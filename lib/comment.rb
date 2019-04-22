@@ -30,8 +30,8 @@ class Comment
   end
 
   def save
-    @author.gsub(/[<>\n\r\/]/, "").strip!
-    @content.gsub(/[<>\n\r\/]/, "").strip!
+    @author.gsub(/[<>\n\r]/, "").strip!
+    @content.gsub(/[<>\n\r]/, "").strip!
     CSV.open(@@path, "a+") do |csv|
       csv << [@gossip_number,@author,@content]
     end
