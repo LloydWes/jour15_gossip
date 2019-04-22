@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>The Gossip Project</title>
+</head>
+<body>
+	<h1>Voici la page du gossip n° <%=url_index.to_i + 1 %> !</h1>
+	<p>
+		auteur : <%= gossip_obj.author%>
+		<br />
+		contenu : <%= gossip_obj.content%>
+	</p>
+	<p>Tu peux <a href='/gossips/new/' >créer de nouveaux potins</a><br />
+		<a href="/">Pour revenir à l'accueil c'est ici</a>
+	</p>
+</body>
+</html>
