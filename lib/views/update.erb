@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>The Gossip Project</title>
+</head>
+<body>
+	<h1>Ici tu modifie un gossip !</h1><br />
+	<form action="/gossips/<%=url_index%>/update/redirect" method="post">
+		Ton nom :<br />
+		<input type="text" name="new_author" value="<%= gossip_obj.author%>" placeholder="Ton pseudo">
+		<br />
+		Ton potin :<br />
+		<textarea type="text" name="new_content" style="width: 500px; height: 300px;" placeholder="(ne mets pas de '<', '>' dans ton potin stp c'est chiant)"><%= gossip_obj.content%></textarea>
+		<br /><br />
+		<input type="submit" value="Modifie ton potin">
+	</form> 
+
+	<p class="footer_link">Tu peux <a href='/gossips/new/'>créer de nouveaux potins</a><br />
+		<a href="/">Pour revenir à l'accueil c'est ici</a>
+	</p>
+
+</body>
+</html>

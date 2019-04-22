@@ -3,18 +3,18 @@
 	<title>The Gossip Project</title>
 </head>
 <body>
-	<h1>Mon super site de gossip !</h1><br />
-	<form action="/gossips/new" method="post">
-		First name:<br />
+	<h1>Ici tu crée un gossip !</h1><br />
+	<form action="/gossips/new" method="post" class="form_new">
+		Ton nom (ou ton pseudo) :<br />
 		<input type="text" name="author" placeholder="Ton pseudo">
 		<br />
-		Last name:<br />
-		<textarea type="text" name="content" value="Mouse" style="width: 500px; height: 300px;">Ton potin ici</textarea>
+		Ton potin  :<br />
+		<textarea type="text" name="content" value="Mouse" style="width: 500px; height: 300px;" placeholder="(ne mets pas de '<', '>'' dans ton potin stp c'est chiant)"></textarea>
 		<br /><br />
 		<input type="submit" value="Balance ton potin">
 	</form> 
 
-	<p>
+	<p class="footer_link">
 		<a href="/">Pour revenir à l'accueil c'est ici</a>
 	</p>
 

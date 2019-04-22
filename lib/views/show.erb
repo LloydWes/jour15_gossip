@@ -8,8 +8,11 @@
 		auteur : <%= gossip_obj.author%>
 		<br />
 		contenu : <%= gossip_obj.content%>
+		<form action="/gossips/<%= url_index.to_i%>/update" method="post">
+			<input type="submit" value="Modifier"/>
+		</form>
 	</p>
-	<p>Tu peux <a href='/gossips/new/' >créer de nouveaux potins</a><br />
+	<p class="footer_link">Tu peux <a href='/gossips/new/' >créer de nouveaux potins</a><br />
 		<a href="/">Pour revenir à l'accueil c'est ici</a>
 	</p>
 </body>
