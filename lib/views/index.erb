@@ -2,24 +2,28 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="<%=url('css/style.css')%>" />
 	<title>The Gossip Project</title>
 </head>
 <body>
 	<div id="globale_container">
-		<h1>Mon super site de gossip !</h1>
-		<div id="globale_gossip">
-			<% gossips.each_with_index do |gossip_obj, current_index| %>
-
-			<p class="gossip_bloc">
-				<a href="/gossips/<%=current_index%>" class="gossip_link">Voici la page du potin n°<%= current_index + 1%></a> <br />
-				auteur : <%= gossip_obj.author%>
+		<div id="nav_bloc_flex">
+			<h1>Mon super site de gossip !</h1>
+			<nav>
+				<div class="button"><a href="/">revenir à l'accueil</a></div>
+				<div class="button"><a href='/gossips/new/' >créer un gossip</a></div>
+			</nav>
+		</div>
+		<div id="globale_gossip_flex">
+			<% gossips.each_with_index do |gossip_obj, current_index| %> <!-- On boucle sur un tableau qui contient tousl les éléments pour les afficher -->
+			<p class="gossip_bloc_flex">
+				<a href="/gossips/<%=current_index%>" class="gossip_link">Voici la page du gossip n°<%= current_index + 1%></a> <br /><!--on crée des liens pour chaque gossip-->
+				auteur : <%= gossip_obj.author%> <!-- on affiche l'auteur -->
 				<br />
-				contenu : <%= gossip_obj.content%>
+				contenu : <%= gossip_obj.content%> <!-- on affiche le contenu du gossip -->
 			</p>
 			<%end%>
 		</div>
-		<p class="footer_link">Tu peux <a href='/gossips/new/' >créer de nouveaux potins</a>
-		</p>
 	</div>
 </body>	
-</htmxl>
+</html>

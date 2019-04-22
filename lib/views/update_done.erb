@@ -1,15 +1,23 @@
 <html>
 <head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="<%=url('css/style.css')%>" />
 	<title>The Gossip Project</title>
+	<meta http-equiv="refresh" content="5; url=/" />
 </head>
 <body>
-	<h1><%=update_done%></h1><br />
-
-
-	<p class="footer_link">Tu peux <a href='/gossips/new/'>créer de nouveaux potins</a><br />
-		<a href="/">Pour revenir à l'accueil c'est ici</a>
-	</p>
-
+	<div id="globale_container">
+		<div id="nav_bloc_flex">
+			<h1><%=update_done%></h1><br />
+			<nav>
+				<div class="button"><a href="/">revenir à l'accueil</a></nav>
+				<div class="button"><a href='/gossips/new/' >créer un gossip</a></div>
+			</nav>
+		</div>
+		<div id="globale_gossip_flex">
+			<p>Retour au menu dans 5 secondes</p>
+		</div>
+	</div>
 
 </body>
 </html>

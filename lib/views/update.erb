@@ -1,22 +1,31 @@
 <html>
 <head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="<%=url('css/style.css')%>" />
 	<title>The Gossip Project</title>
 </head>
 <body>
-	<h1>Ici tu modifie un gossip !</h1><br />
-	<form action="/gossips/<%=url_index%>/update/redirect" method="post">
-		Ton nom :<br />
-		<input type="text" name="new_author" value="<%= gossip_obj.author%>" placeholder="Ton pseudo">
-		<br />
-		Ton potin :<br />
-		<textarea type="text" name="new_content" style="width: 500px; height: 300px;" placeholder="(ne mets pas de '<', '>' dans ton potin stp c'est chiant)"><%= gossip_obj.content%></textarea>
-		<br /><br />
-		<input type="submit" value="Modifie ton potin">
-	</form> 
+	<div id="globale_container">
+		<div id="nav_bloc_flex">
+			<h1>Ici tu modifie un gossip !</h1><br />
+			<nav>
+				<div class="button"><a href="/">revenir à l'accueil</a></div>
+				<div class="button"><a href='/gossips/new/' >créer un gossip</a></div>
+			</nav>
+		</div>
+		<div id="globale_gossip_flex">
+			<form action="/gossips/<%=url_index%>/update/redirect" method="post">
+				Ton nom :<br />
+				<input type="text" name="new_author" value="<%= gossip_obj.author%>" placeholder="Ton pseudo">
+				<br />
+				Ton potin :<br />
+				<textarea type="text" name="new_content" style="width: 500px; height: 300px;" placeholder="(ne mets pas de '<', '>' dans ton potin stp c'est chiant)"><%= gossip_obj.content%></textarea>
+				<br /><br />
+				<input type="submit" value="Modifier le gossip">
+			</form> 
 
-	<p class="footer_link">Tu peux <a href='/gossips/new/'>créer de nouveaux potins</a><br />
-		<a href="/">Pour revenir à l'accueil c'est ici</a>
-	</p>
+		</div>
+	</div>
 
 </body>
 </html>

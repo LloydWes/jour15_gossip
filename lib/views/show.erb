@@ -1,19 +1,46 @@
 <html>
 <head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="<%=url('css/style.css')%>" />
 	<title>The Gossip Project</title>
 </head>
 <body>
-	<h1>Voici la page du gossip n° <%=url_index.to_i + 1 %> !</h1>
-	<p>
-		auteur : <%= gossip_obj.author%>
-		<br />
-		contenu : <%= gossip_obj.content%>
-		<form action="/gossips/<%= url_index.to_i%>/update" method="post">
-			<input type="submit" value="Modifier"/>
-		</form>
-	</p>
-	<p class="footer_link">Tu peux <a href='/gossips/new/' >créer de nouveaux potins</a><br />
-		<a href="/">Pour revenir à l'accueil c'est ici</a>
-	</p>
+	<div id="globale_container">
+		<div id="nav_bloc_flex">
+			<h1>Voici la page du gossip n° <%=url_index.to_i + 1 %> !</h1>
+			<nav>
+				<div class="button"><a href="/">revenir à l'accueil</a></div>
+				<div class="button"><a href='/gossips/new/' >créer un gossip</a></div>
+			</nav>
+		</div>
+		<div id="globale_gossip_flex">
+			<div id="form_flex">
+				<p>
+					auteur : <%= gossip_obj.author%>
+					<br />
+					contenu : <%= gossip_obj.content%>
+				</p>
+				<form action="/gossips/<%= url_index.to_i%>/update" method="post">
+					<input type="submit" value="Modifier"/>
+				</form>
+				<div id="comment_section">
+					<%comments_array.each_with_index do |comment, current_index|%>
+						<div class="comment">
+							<p class="p_comment nb">Commentaire n°<%=comment.gossip_number.to_i + 1%></p>
+							<p class="p_comment author">De <%= comment.author %></p>
+							<p class="p_comment content"><%= comment.content %></p>
+						</div>
+					<%end%>
+					<form action="/gossips/<%=url_index%>/comment" method="post">
+							<p>Ton pseudo</p>
+							<input type="text" name="comment_author" placeholder="Ton pseudo" />
+							<p>Ton message</p>
+							<textarea name="comment_content" placeholder="ton massage ici"></textarea>
+							<input type="submit" value="Envoyer ton commentaire" />
+						</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
