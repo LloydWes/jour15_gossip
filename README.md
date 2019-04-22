@@ -1,7 +1,7 @@
 Super site de potins réalisé par :<br />
 Lloyd Westbury (@Lloyd sur Slack)<br />
 
-Je suis allé jusqu'au point *2.7 Editer un potin* et pas plus loin parce qu'après j'ai voulu faire du css et ça m'a saoulé<br />
+Je suis allé jusqu'au point **2.7 Editer un potin** et pas plus loin parce qu'après j'ai voulu faire du css et ça m'a saoulé<br />
 
 Pour un fonctionnement optimal de mon projet :<br />
 - Tu devra installer la gem chilkat `gem install chilkat`<br />
