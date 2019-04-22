@@ -7,3 +7,4 @@ Pour un fonctionnement optimal de mon projet tu devra :<br />
 - installer la gem chilkat `gem install chilkat`<br />
 - Cloner le dépot `git clone https://github.com/LloydWes/jour15_gossip`<br />
 (Dans l'ordre que tu veux hein)<br />
+Bisous
