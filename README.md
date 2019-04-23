@@ -6,6 +6,6 @@ Je suis allé jusqu'au point **2.8. Les commentaires de potins** après j'ai vou
 Pour un fonctionnement optimal de mon projet tu devra (dans l'ordre stp) :<br />
 - installer la gem chilkat `gem install chilkat`<br />
 - cloner le dépot `git clone https://github.com/LloydWes/jour15_gossip`<br />
-- executer la commande `echo "" >> db/gossip.csv` dans la racine de projet (juste après avoir téléchargé le projet)
+- assure toi qu'il y ai **une** ligne vide à la fin de `db/gossip.csv`
 
 Bisous
