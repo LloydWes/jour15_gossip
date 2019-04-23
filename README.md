@@ -8,3 +8,4 @@ Pour un fonctionnement optimal de mon projet tu devra :<br />
 - cloner le dépot `git clone https://github.com/LloydWes/jour15_gossip`<br />
 (Dans l'ordre que tu veux hein)<br />
 Bisous
+- executer la commande `echo "" >> db/gossip.csv` dans la racine de projet (juste après avoir téléchargé le projet)
